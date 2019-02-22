@@ -21,6 +21,7 @@ public class MyLog {
 	}
 	
 	public static int error(String msg) {
+		
 			System.err.println("[ERROR] " + msg);
 			return 1;
 	}

@@ -10,6 +10,9 @@ public class MyMathTest {
 		
 		System.out.println("Running test: " + MyMathTest.class.getSimpleName());
 		
+		MyAsserts.isTrue(MyMath.manhattanDistance(0, 0, 0, 0) == 0, "Manhattan distance test failed!");
+		MyAsserts.isTrue(MyMath.manhattanDistance(new Point(0, 0), new Point(0, 0)) == 0, "Manhattan distance test failed!");
+		
 		// - - - 2 -
 		// - - - - -
 		// - - - - - 
