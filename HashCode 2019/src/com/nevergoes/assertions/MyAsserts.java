@@ -1,4 +1,4 @@
-package com.nevergoes.test;
+package com.nevergoes.assertions;
 
 public class MyAsserts {
 

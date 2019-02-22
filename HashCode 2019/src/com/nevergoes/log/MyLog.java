@@ -21,5 +21,4 @@ public class MyLog {
 			System.out.println("[ERROR] " + msg);
 		}
 	}
-
 }
