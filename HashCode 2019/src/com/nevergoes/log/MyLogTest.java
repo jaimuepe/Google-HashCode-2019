@@ -5,7 +5,7 @@ import com.nevergoes.assertions.MyAsserts;
 public class MyLogTest {
 
 	public static void main(String[] args) {
-		System.out.println("Running test: MyLogTest");
+		System.out.println("Running test: " + MyLogTest.class.getSimpleName());
 		System.setProperty("level", "debug");
 		MyAsserts.isTrue(MyLog.debug("debug") == 1, "La traza de debug ha fallado para mensajes debug.");
 		System.setProperty("level", "info");
