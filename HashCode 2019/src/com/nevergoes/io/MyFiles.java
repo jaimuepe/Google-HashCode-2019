@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+import com.nevergoes.log.MyLog;
+
 public class MyFiles {
 
 	public static List<String> read(String fileName) {
@@ -14,14 +16,14 @@ public class MyFiles {
 		final URL fileResource = MyFiles.class.getClassLoader().getResource(fileName);
 
 		if (fileResource == null) {
-			System.err.print("File " + "\"" + fileName + "\"" + " not found!");
+			MyLog.error("File " + "\"" + fileName + "\"" + " not found!");
 			return null;
 		}
 
 		try {
 			return Files.readAllLines(Paths.get(fileResource.toURI()));
 		} catch (IOException | URISyntaxException e) {
-			e.printStackTrace();
+			MyLog.error(e);
 		}
 
 		return null;

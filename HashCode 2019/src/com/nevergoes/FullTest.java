@@ -1,6 +1,7 @@
 package com.nevergoes;
 
 import com.nevergoes.io.MyFilesTest;
+import com.nevergoes.log.MyLog;
 import com.nevergoes.log.MyLogTest;
 import com.nevergoes.math.MyMathTest;
 
@@ -17,7 +18,8 @@ public class FullTest {
 			System.out.println("All tests executed");
 
 		} catch (Exception e) {
-			System.err.println("A test failed!");
+			MyLog.error(e);
+			MyLog.error("A test failed!");
 		}
 	}
 }

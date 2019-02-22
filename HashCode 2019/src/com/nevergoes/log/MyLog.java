@@ -21,6 +21,11 @@ public class MyLog {
 		return 0;
 	}
 
+	public static int error(Throwable t) {
+		t.printStackTrace(System.err);
+		return 1;
+	}
+
 	public static int error(String msg) {
 		System.err.println("[ERROR] " + msg);
 		return 1;

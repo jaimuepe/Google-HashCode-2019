@@ -10,7 +10,7 @@ public class MyFilesTest {
 
 		System.out.println("Running test: " + MyFilesTest.class.getSimpleName());
 
-		List<String> lines = MyFiles.read("testFile.txt");
+		List<String> lines = MyFiles.read("testsFile.txt");
 		MyAsserts.isTrue(lines.size() == 3, "Fileread test failed!");
 	}
 }
