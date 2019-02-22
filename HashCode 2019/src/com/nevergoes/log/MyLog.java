@@ -17,9 +17,7 @@ public class MyLog {
 	}
 	
 	public static void error(String msg) {
-		if(property.equals("error") || property.equals("info") || property.equals("debug")) {
 			System.out.println("[ERROR] " + msg);
-		}
 	}
 
 }
