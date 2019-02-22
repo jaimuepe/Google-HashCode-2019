@@ -8,10 +8,16 @@ public class FullTest {
 
 	public static void main(String[] args) {
 
-		MyFilesTest.main(args);
-		MyMathTest.main(args);
-		MyLogTest.main(args);
+		try {
 
-		System.out.println("All tests executed");
+			MyFilesTest.main(args);
+			MyMathTest.main(args);
+			MyLogTest.main(args);
+
+			System.out.println("All tests executed");
+
+		} catch (Exception e) {
+			System.err.println("A test failed!");
+		}
 	}
 }
