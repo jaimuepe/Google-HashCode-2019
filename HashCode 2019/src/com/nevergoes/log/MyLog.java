@@ -19,5 +19,4 @@ public class MyLog {
 	public static void error(String msg) {
 			System.out.println("[ERROR] " + msg);
 	}
-
 }
