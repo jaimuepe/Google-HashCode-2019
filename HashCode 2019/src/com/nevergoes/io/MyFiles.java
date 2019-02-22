@@ -1,4 +1,4 @@
-package com.hashcode.io;
+package com.nevergoes.io;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -12,7 +12,7 @@ public class MyFiles {
 		
 		try {
 			return Files.readAllLines(Paths.get(MyFiles.class.getClassLoader().getResource(fileName).toURI()));
-		} catch (IOException | URISyntaxException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
