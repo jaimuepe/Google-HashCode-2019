@@ -18,14 +18,14 @@ public class MyFiles {
 		final URL fileResource = MyFiles.class.getClassLoader().getResource(fileName);
 
 		if (fileResource == null) {
-			System.err.print("File " + "\"" + fileName + "\"" + " not found!");
+			MyLog.error("File " + "\"" + fileName + "\"" + " not found!");
 			return null;
 		}
 
 		try {
 			return Files.readAllLines(Paths.get(fileResource.toURI()));
 		} catch (IOException | URISyntaxException e) {
-			e.printStackTrace();
+			MyLog.error(e);
 		}
 
 		return null;
