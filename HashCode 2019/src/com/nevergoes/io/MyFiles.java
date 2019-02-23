@@ -1,8 +1,6 @@
 package com.nevergoes.io;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,7 +13,7 @@ public class MyFiles {
 
 	public static List<String> readFile(String fileName) {
 
-		final URL fileResource = MyFiles.class.getClassLoader().getResource(fileName);
+		final Path fileResource = Paths.get("resources/" + fileName);
 
 		if (fileResource == null) {
 			MyLog.error("File " + "\"" + fileName + "\"" + " not found!");
@@ -23,8 +21,8 @@ public class MyFiles {
 		}
 
 		try {
-			return Files.readAllLines(Paths.get(fileResource.toURI()));
-		} catch (IOException | URISyntaxException e) {
+			return Files.readAllLines(fileResource);
+		} catch (IOException e) {
 			MyLog.error(e);
 		}
 
