@@ -8,12 +8,16 @@ import com.nevergoes.math.MyMathTest;
 public class FullTest {
 
 	public static void main(String[] args) {
+		test();
+	}
+
+	public static void test() {
 
 		try {
 
-			MyFilesTest.main(args);
-			MyMathTest.main(args);
-			MyLogTest.main(args);
+			MyFilesTest.test();
+			MyMathTest.test();
+			MyLogTest.test();
 
 			System.out.println("All tests executed");
 

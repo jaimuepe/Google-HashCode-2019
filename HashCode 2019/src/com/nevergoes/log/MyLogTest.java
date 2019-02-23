@@ -8,6 +8,10 @@ import com.nevergoes.assertions.MyAsserts;
 public class MyLogTest {
 
 	public static void main(String[] args) {
+		test();
+	}
+
+	public static void test() {
 
 		System.out.println("Running test: " + MyLogTest.class.getSimpleName());
 
